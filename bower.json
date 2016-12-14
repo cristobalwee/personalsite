@@ -17,6 +17,10 @@
   "dependencies": {
     "angular": "~1.3.13",
     "angular-route": "~1.3.14",
-    "foundation-sites": "^6.2.3"
+    "foundation-sites": "^6.2.3",
+    "gsap": "^1.19.0",
+    "typed.js": "^1.1.4",
+    "jquery.unevent": "https://github.com/yckart/jquery.unevent.js/",
+    "jquery.unevent.js": "https://github.com/yckart/jquery.unevent.js.git#^0.0.2"
   }
 }

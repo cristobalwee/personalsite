@@ -1,0 +1,47 @@
+<div data-sticky-container>
+  <div class="title-bar noanim" data-sticky data-options="marginTop:0;" style="width:100%">
+    <div class="title-bar-left">
+      <a href="#/" class="homelink"><img src="./media/Logo.svg"></a>
+    </div>
+    <div class="title-bar-right">
+      <button type="button" ng-click="toggleMenu()" data-toggle><img src="./media/menuicon.svg"></button>
+    </div>
+  </div>
+</div>
+<div class="menu">
+  <div class="header">
+    <a href="javascript:void(0)" ng-click="closeMenu()"><img src="./media/closeicon.svg"></a>
+  </div>
+  <div class="content">
+    <a href="#/about"><h3>About</h3></a>
+    <a href="#/whosin"><h3>Works</h3></a>
+    <a href="#/contact"><h3>Contact</h3></a>
+  </div>
+  <div class="footer">
+    <a href="https://www.linkedin.com/in/cristobal-grana-samanez" target="_blank"><img src="./media/linkedinwhite.svg"></a>&nbsp;&nbsp;
+    <a href="https://github.com/cristobalwee" target="_blank"><img src="./media/githubwhite.svg"></a>&nbsp;&nbsp;
+    <a href="https://www.behance.net/cristobalw918d" target="_blank"><img id="behance" src="./media/behancewhite.svg"></a>
+  </div>
+</div>
+<div id="contact">
+  <form class="content">
+    <h3 class="animout">Let's talk</h3>
+    <p class="animout">Name</p>
+    <input class="animout" type="text" ng-model="name">
+    <p class="animout">Email</p>
+    <input class="animout" type="email" ng-model="email">
+    <p class="animout" >Comments</p>
+    <textarea class="animout" name="comments" ng-model="comments" cols="40" rows="2"></textarea>
+    <button class="animout" type="submit" ng-click="send()">Send</button>&nbsp;&nbsp;<a href="./media/resumeblack.pdf" target="_blank"><button class="animout">Resume</button></a>
+  </form>
+</div>
+<div class="indicator content noanim">
+  <a href="#/about"><p>about</p></a>
+  <a href="#/whosin"><p>works</p></a>
+  <a href="#/contact"><p class="currentposition">contact</p></a>
+</div>
+<div class="footer">
+  <a href="https://www.linkedin.com/in/cristobal-grana-samanez" target="_blank"><img src="./media/social_linkedin.svg"></a>&nbsp;&nbsp;
+  <a href="https://github.com/cristobalwee" target="_blank"><img src="./media/github.svg"></a>&nbsp;&nbsp;
+  <a href="https://www.behance.net/cristobalw918d" target="_blank"><img id="behance" src="./media/behance.svg"></a>
+</div>

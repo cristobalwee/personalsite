@@ -1,1 +1,787 @@
-// Add any custom Sass & CSS here
+body {
+  background-color: white;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.white {
+  color: white;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+.noanim {
+  animation: none !important;
+}
+
+.padleft {
+  padding-left: 2rem;
+}
+
+.responsive {
+  display: none;
+}
+
+.first {
+  animation: fadein 0.5s both ease-in-out;
+  animation-delay: 0.15s;
+}
+
+.second {
+  animation: fadein 0.5s both ease-in-out;
+  animation-delay: 0.3s;
+}
+
+.third {
+  animation: fadein 0.5s both ease-in-out;
+  animation-delay: 0.45s;
+}
+
+.fourth {
+  animation: fadein 0.5s both ease-in-out;
+  animation-delay: 0.6s;
+}
+
+.title-bar {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  padding: 1rem 2rem;
+  z-index: 4;
+  animation: headeranim 1s both ease-in-out;
+
+  .title-bar-left {
+    text-align: left;
+
+    img {
+      height: 2rem;
+      vertical-align: middle;
+      display: inline !important;
+      padding-right: 0.6rem;
+    }
+  }
+
+  .title-bar-right {
+    text-align: right;
+    vertical-align: middle;
+
+    img {
+      height: 1.2rem;
+      vertical-align: middle;
+      display: inline !important;
+    }
+  }
+}
+
+.mouse {
+  animation: footeranim 1s both ease-in-out;
+  width: 2rem;
+  height: 3rem;
+  border: solid 2px black;
+  margin: 0 auto;
+  @include border-radius(24px);
+
+  .scrollwheel {
+    width: 4px;
+    height: 4px;
+    @include border-radius(50%);
+    position: absolute;
+    top: 0.8rem;
+    left: 50%;
+    @include transform(translateX(-50%));
+    background-color: black;
+    animation: scroll 1.8s linear infinite;
+  }
+}
+
+.work {
+  width: 60%;
+  height: 55%;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  @include transform(translateY(-50%));
+  @include transition(all 0.5s ease-in-out);
+  text-align: center;
+  animation: drawbox 0.5s both ease-in-out;
+
+  img {
+    animation: fade 0.25s both ease-in-out;
+    animation-delay: 0.5s;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    @include transform(translateY(-50%));
+    display: inline;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 4;
+  top: 0;
+  left: 0;
+  @include transition(all 0.5s ease);
+  padding: 2rem;
+  text-align: left;
+
+  h3 {
+    font-family: $font;
+    color: white;
+    position: relative;
+    text-align: left;
+    animation: fade 0.25s both ease-in-out;
+    animation-delay: 0.5s;
+  }
+
+  p {
+    font-family: $font;
+    color: white;
+    text-align: left;
+    position: relative;
+    animation: fade 0.25s both ease-in-out;
+    animation-delay: 0.5s;
+  }
+
+  .corner {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    text-align: right;
+    font-size: 2rem;
+  }
+
+  button {
+    background-color: white;
+    color: black;
+    font-family: $font;
+    padding: 0.5rem 1rem;
+    position: relative;
+    animation: fade 0.25s both ease-in-out;
+    animation-delay: 0.5s;
+  }
+}
+
+.indicator {
+  position: absolute;
+  right: 2rem;
+  line-height: 90%;
+  animation: fadeinright 1s both ease-in-out;
+
+  p {
+    color: #898989;
+    font-family: $font;
+    text-align: right;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .currentposition {
+    color: black;
+  }
+
+  .worksposition {
+    text-align: right;
+    padding: 0;
+    animation: openhorizontal 0.35s both ease-in-out;
+    height: 3rem;
+
+    img {
+      width: 0.9rem;
+      height: 0.4rem !important;
+      fill: #898989;
+      animation: fade 0.4s both ease-in-out;
+      animation-delay: 0.35s;
+    }
+
+    .currentline {
+      height: 0.4rem !important;
+      width: 1.8rem;
+      animation: growline 0.25s both ease-in-out;
+    }
+  }
+}
+
+.menu {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  @include transition(all 0.5s ease);
+
+  .header {
+    img {
+      position: fixed;
+      top: 1rem;
+      right: 2rem;
+      height: 2rem;
+    }
+  }
+
+  h3 {
+    font-family: $font;
+    color: white;
+    text-align: center;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes growline {
+  from {
+    width: 0.9rem;
+  }
+}
+
+@keyframes openhorizontal {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    height: 3rem;
+  }
+}
+
+@keyframes fadeinright {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, -50%, 0);
+  }
+
+  70% {
+    opacity: 0;
+    transform: translate3d(100%, -50%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    top: 0.8rem;
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    top: 2rem;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes footeranim {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  70% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes headeranim {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  70% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: translate3d(0, -15%, 0);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translate3d(0, -10%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: translate3d(0, 15%, 0);
+  }
+
+  75% {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes drawbox {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes drawboxy {
+  0% {
+    opacity: 0;
+    width: 12rem;
+  }
+
+  100% {
+    width: 40%;
+  }
+}
+
+.exit {
+  @include transition(all 0.5s ease);
+  animation: fadeout 0.5s both ease-in-out;
+}
+
+#landing {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+
+  h1 {
+    font-family: $font;
+    color: black;
+    @include transition(all 0.5s ease);
+    animation: fadein 0.5s both ease-in-out;
+    position: relative;
+    font-size: 3.5rem;
+  }
+
+  h4 {
+    font-family: $font;
+    @include transition(all 0.5s ease);
+    animation: fadein 0.5s both ease-in-out;
+    animation-delay: 0.15s;
+    position: relative;
+    color: #424242;
+  }
+}
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+
+  svg {
+    height: 4rem;
+    margin: 1rem;
+    @include transition(all 0.5s ease);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  g {
+    @include transition(all 0.5s ease);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  path {
+    @include transition(all 0.5s ease);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #sketch:hover {
+    #Bottom-Back {
+      fill: #ec6c00;
+    }
+
+    #Bottom-Mid, #Top-Side-Left, #Top-Side-Right {
+      fill: #ffae00;
+    }
+
+    #Top-Mid {
+      fill: #ffefb4;
+    }
+
+    #Top-Left, #Top-Right {
+      fill: #fed305;
+    }
+  }
+
+  #html5:hover {
+    #firsthtml5 {
+      fill: #e34f26;
+      @include transition(all 0.5s ease);
+    }
+
+    #secondhtml5 {
+      fill: #ef652a;
+      @include transition(all 0.5s ease);
+    }
+  }
+
+  #sass:hover {
+    #sasspath {
+      fill: #cd6799;
+      @include transition(all 0.5s ease);
+    }
+  }
+
+  #angular:hover {
+    #firstangular {
+      fill: #b52e31;
+      @include transition(all 0.5s ease);
+    }
+
+    #secondangular {
+      fill: #e23237;
+      @include transition(all 0.5s ease);
+    }
+  }
+
+  #node:hover {
+    #nodepath {
+      fill: #8CC84b;
+      @include transition(all 0.5s ease);
+    }
+  }
+
+  p {
+    font-family: $font;
+    color: black;
+    line-height: 115%;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    position: relative;
+    @include transition(all 0.5s ease);
+  }
+}
+
+#whosin {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+
+  .work {
+    background-color: #538aa8;
+
+    img {
+      height: 65%;
+    }
+  }
+}
+
+#foodful {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+
+  .work {
+    background-color: #d0e8f9;
+
+    img {
+      height: 50%;
+    }
+  }
+}
+
+#illinisporcle {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+
+  .work {
+    background-color: #233c59;
+
+    img {
+      height: 50%;
+    }
+  }
+}
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  top: 0;
+  left: 0;
+
+  h3 {
+    font-family: $font;
+    color: white;
+    text-align: center;
+    animation: fade 0.25s both ease-in-out;
+    animation-delay: 0.5s;
+  }
+
+  p {
+    font-family: $font;
+    color: white;
+    text-align: left;
+    margin-bottom: 0;
+    animation: fade 0.25s both ease-in-out;
+    animation-delay: 0.5s;
+  }
+
+  form {
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 2rem 3rem;
+    text-align: center;
+    margin: 0 auto;
+    animation: drawboxy 0.5s both ease-in-out;
+
+    input {
+      border: none;
+      border-bottom: solid 1px white;
+      font-family: $font;
+      color: white;
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+      margin: 0.5rem 0;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      height: 0.8rem;
+      animation: fade 0.25s both ease-in-out;
+      animation-delay: 0.5s;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    textarea {
+      border: none;
+      border-bottom: solid 1px white;
+      font-family: $font;
+      color: white;
+      box-shadow: none;
+      margin-bottom: 2rem;
+      background-color: rgba(0, 0, 0, 0);
+      animation: fade 0.25s both ease-in-out;
+      animation-delay: 0.5s;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      font-family: $font;
+      padding: 0.5rem 1rem;
+      position: relative;
+      animation: fade 0.25s both ease-in-out;
+      animation-delay: 0.5s;
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  width: 100%;
+  animation: footeranim 1s both ease-in-out;
+  animation-delay: 0.5s;
+
+  img {
+    height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    overflow: auto;
+  }
+
+  #responsivecontainer {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .responsive {
+    display: block;
+  }
+
+  .responsivehide {
+    display: none;
+  }
+
+  #landing {
+    padding: 2rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+    }
+  }
+
+  .menu {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    @include transition(all 0.5s ease);
+
+    .header {
+      img {
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        height: 2rem;
+      }
+    }
+
+    h3 {
+      font-family: $font;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  #whosinresponsive {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+  }
+}

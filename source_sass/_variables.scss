@@ -1,1 +1,9 @@
-// Insert your variables
+@font-face {
+    font-family: 'Jaapokki';
+    src: url('../media/jaapokki/jaapokki-regular.eot');
+    src: url('../media/jaapokki/jaapokki-regular.woff') format('woff'),
+        url('../media/jaapokki/jaapokki-regular.ttf') format('truetype'),
+        url('../media/jaapokki/jaapokki-regular.svg') format('svg');
+}
+
+$font: 'Jaapokki', sans-serif;
