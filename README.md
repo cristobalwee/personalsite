@@ -1,26 +1,10 @@
-# Starter files for MP3
+# My personal website
+Just a simple portfolio website I built to replace my old one at http://cristobalgrana.com/
 
-## Setup
-Use the following commands in your vagrant development environment to get this up and running
-```bash
-git clone --bare https://github.com/uiuc-web-programming/mp3_starter.git
-cd mp3_starter.git
-git push --mirror https://github.com/your-github-username/mp3.git
-# Mirror-push to your mp3 repository. Use your github username in the URL. Change the URL if you're using bitbucket.
-cd ..
-rm -rf mp3_starter.git
+## What I used:
+The site is built with HTML and Sass, with Foundation for responsiveness. The frontend is written in angular and the animations are built with GSAP and CSS keyframes; I used grunt and compass for build automation.
 
-git clone https://github.com/your-github-username/mp3.git
-cd mp3
-npm install (remember to use --no-bin-links if you're on Windows)
-bower install
-grunt compass
-grunt uglify
-grunt
-```
-
-You can leave this command running in the background while development for livereloading:
-
-```bash
-grunt
-```
+<br><p align="center">
+  <img width="70" src="https://cloud.githubusercontent.com/assets/8813763/21210353/ed426152-c23f-11e6-9602-cdc26c37c9dd.png?raw=true" alt="foodful logo"/><br><br>
+  <img width="180" src="https://cloud.githubusercontent.com/assets/8813763/21210423/86b7ad56-c240-11e6-8452-1a62e933cfcd.png?raw=true" alt="foodful logo"/>
+</p>
