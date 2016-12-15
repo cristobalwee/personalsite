@@ -10,9 +10,25 @@ app.controller('LandingController', ['$scope', '$http', function($scope, $http) 
     });
   });
 
+  $(document).ready(function() {
+    $('#navbar').css("display", "none");
+    var winH = $(window).height() - 100;
+    $(window).scroll(function() {
+      var responsivetop = $("#responsivecontainer");
+      if ($(window).scrollTop() > winH) {
+        $('#navbar').css("position", "fixed");
+        $('#navbar').css("display", "block");
+      }
+      if ($(window).scrollTop() <= winH) {
+        $('#navbar').css("display", "none");
+        $('#navbar').css("position", "static");
+      }
+    });
+  });
+
   $scope.toggleMenu = function() {
     $(".menu").css("opacity", "1");
-    $(".menu").css("z-index", "4");
+    $(".menu").css("z-index", "10");
   };
 
   $scope.closeMenu = function() {
@@ -175,7 +191,7 @@ app.controller('FoodfulController', ['$scope', '$http', function($scope, $http) 
           var $box = $(".work");
           TweenLite.to($box, 0.1, {scaleX: 0.0001, delay: 0.25, ease: Power2.easeInOut});
           setTimeout(function() {
-            window.location.href = "#/illinisporcle";
+            window.location.href = "#/lamaglama";
           }, 950);
         };
         if (e.originalEvent.wheelDelta /120 > 0) {
@@ -194,6 +210,54 @@ app.controller('FoodfulController', ['$scope', '$http', function($scope, $http) 
     });
 
     $("#foodful").bind("mousewheel", function(e) {
+      if (!scrollflag) {
+        scrollflag = true;
+      };
+    }, 150);
+  };
+}]);
+
+app.controller('LamaglamaController', ['$scope', '$http', function($scope, $http) {
+  $scope.toggleMenu = function() {
+    $(".menu").css("opacity", "1");
+    $(".menu").css("z-index", "4");
+  };
+
+  $scope.closeMenu = function() {
+    $(".menu").css("z-index", "-1");
+    $(".menu").css("opacity", "0");
+  };
+
+  if (!isMobile) {
+    $("#lamaglama").bind("mousewheel", function(e) {
+      if (scrollflag) {
+        if(e.originalEvent.wheelDelta /120 < 0) {
+          var $currline = $(".currentline");
+          TweenMax.to($currline, 0.4, {width: "0.9rem", delay: 0.25});
+          var $animout = $(".animout");
+          TweenLite.to($animout, 0.25, {autoAlpha: 0});
+          var $box = $(".work");
+          TweenLite.to($box, 0.1, {scaleX: 0.0001, delay: 0.25, ease: Power2.easeInOut});
+          setTimeout(function() {
+            window.location.href = "#/illinisporcle";
+          }, 950);
+        };
+        if (e.originalEvent.wheelDelta /120 > 0) {
+          var $currline = $(".currentline");
+          TweenMax.to($currline, 0.4, {width: "0.9rem", delay: 0.25});
+          var $animout = $(".animout");
+          TweenLite.to($animout, 0.25, {autoAlpha: 0});
+          var $box = $(".work");
+          TweenLite.to($box, 0.1, {scaleX: 0.0001, delay: 0.25, ease: Power2.easeInOut});
+          setTimeout(function() {
+            window.location.href = "#/foodful";
+          }, 950);
+        };
+        scrollflag = false;
+      };
+    });
+
+    $("#lamaglama").bind("mousewheel", function(e) {
       if (!scrollflag) {
         scrollflag = true;
       };
@@ -237,7 +301,7 @@ app.controller('SporcleController', ['$scope', '$http', function($scope, $http) 
           var $box = $(".work");
           TweenLite.to($box, 0.1, {scaleX: 0.0001, delay: 0.25, ease: Power2.easeInOut});
           setTimeout(function() {
-            window.location.href = "#/foodful";
+            window.location.href = "#/lamaglama";
           }, 950);
         };
         scrollflag = false;

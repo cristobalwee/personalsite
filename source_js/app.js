@@ -22,6 +22,11 @@ app.config(function ($routeProvider) {
         controller: 'FoodfulController'
       })
 
+      .when('/lamaglama', {
+        templateUrl: 'partials/lamaglama.html',
+        controller: 'LamaglamaController'
+      })
+
       .when('/illinisporcle', {
         templateUrl: 'partials/illinisporcle.html',
         controller: 'SporcleController'

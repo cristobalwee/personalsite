@@ -13,31 +13,6 @@
     </div>
   </div></a>
 </div>
-<div id="responsivecontainer" class="responsive">
-  <div id="whosinresponsive">
-    <div class="work">
-      <img class="animout" src="./media/whosin.svg">
-      <div class="overlay">
-        <p class="corner animout">01</p>
-        <div class="content animout">
-          <h3>Who’s in? - Raspberry Pi</h3>
-          <p>Design and development, iOS App</p>
-          <a href="https://github.com/cristobalwee/whosin" target="_blank"><button>check it out</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="responsive" data-sticky-container>
-  <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
-    <div class="title-bar-left">
-      <a href="#/" class="homelink"><img src="./media/Logo.svg"></a>
-    </div>
-    <div class="title-bar-right">
-      <button type="button" ng-click="toggleMenu()" data-toggle><img src="./media/menuicon.svg"></button>
-    </div>
-  </div>
-</div>
 <div class="menu responsive">
   <div class="header">
     <a href="javascript:void(0)" ng-click="closeMenu()"><img src="./media/closeicon.svg"></a>
@@ -51,5 +26,68 @@
     <a href="https://www.linkedin.com/in/cristobal-grana-samanez" target="_blank"><img src="./media/linkedinwhite.svg"></a>&nbsp;&nbsp;
     <a href="https://github.com/cristobalwee" target="_blank"><img src="./media/githubwhite.svg"></a>&nbsp;&nbsp;
     <a href="https://www.behance.net/cristobalw918d" target="_blank"><img id="behance" src="./media/behancewhite.svg"></a>
+  </div>
+</div>
+<div id="responsivecontainer" class="responsive">
+  <div class="responsive" data-sticky-container>
+    <div id="navbar" class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+      <div class="title-bar-left">
+        <a href="#/" class="homelink"><img src="./media/Logo.svg"></a>
+      </div>
+      <div class="title-bar-right">
+        <button type="button" ng-click="toggleMenu()" data-toggle><img src="./media/menuicon.svg"></button>
+      </div>
+    </div>
+  </div>
+  <div id="whosinresponsive">
+    <div class="work">
+      <img class="animout" src="./media/whosin.svg">
+      <div class="overlay">
+        <p class="corner animout">01</p>
+        <div class="content animout">
+          <h3>Who’s in? - Raspberry Pi</h3>
+          <p>Design and development, iOS App</p>
+          <a href="https://github.com/cristobalwee/whosin" target="_blank"><button>check it out</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="foodfulresponsive">
+    <div class="work">
+      <img class="animout" src="./media/foodful.svg">
+      <div class="overlay">
+        <p class="corner animout">02</p>
+        <div class="content animout">
+          <h3>Foodful</h3>
+          <p>Design lead + frontend web development, website</p>
+          <a href="https://github.com/cristobalwee/foodful" target="_blank"><button>check it out</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sporcleresponsive">
+    <div class="work">
+      <img class="animout" src="./media/sporcle.png">
+      <div class="overlay">
+        <p class="corner animout">03</p>
+        <div class="content animout">
+          <h3>Illini Sporcle official website</h3>
+          <p>Design and development, website</p>
+          <a href="http://illinisporcle.org" target="_blank"><button>check it out</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contactresponsive">
+    <form class="content">
+      <h3 class="animout">Let's talk</h3>
+      <p class="animout">Name</p>
+      <input class="animout" type="text" ng-model="name">
+      <p class="animout">Email</p>
+      <input class="animout" type="email" ng-model="email">
+      <p class="animout" >Comments</p>
+      <textarea class="animout" name="comments" ng-model="comments" cols="40" rows="2"></textarea>
+      <button class="animout" type="submit" ng-click="send()">Send</button><br><a href="./media/resumeblack.pdf" target="_blank"><button class="animout">Resume</button></a>
+    </form>
   </div>
 </div>
