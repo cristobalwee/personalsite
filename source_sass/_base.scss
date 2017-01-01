@@ -84,7 +84,7 @@ a {
   .title-bar-left {
     text-align: left;
 
-    img {
+    img, svg {
       height: 2rem;
       vertical-align: middle;
       display: inline !important;
@@ -136,7 +136,7 @@ a {
   text-align: center;
   animation: drawbox 0.5s both ease-in-out;
 
-  img {
+  img, svg {
     animation: fade 0.25s both ease-in-out;
     animation-delay: 0.5s;
     position: relative;
@@ -813,6 +813,16 @@ a {
 
       img {
         height: 12rem;
+      }
+    }
+  }
+
+  #lamaglamaresponsive {
+    .work {
+      background-color: #ff6666;
+
+      svg {
+        width: 12rem;
       }
     }
   }
