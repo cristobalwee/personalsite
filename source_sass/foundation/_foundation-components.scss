@@ -1,4 +1,4 @@
-/* 
+/*
   Includes for all foundation styles
   Make sure foundation is correctly add to gulp build path in gulpfile.js
   Commenting out line will remove that foundation component from compiled css
@@ -16,7 +16,7 @@
 @include foundation-button;
 @include foundation-accordion;
 @include foundation-accordion-menu;
-@include foundation-badge;
+//@include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
 @include foundation-callout;
@@ -27,7 +27,7 @@
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
 @include foundation-flex-video;
-@include foundation-label;
+//@include foundation-label;
 @include foundation-media-object;
 @include foundation-off-canvas;
 @include foundation-orbit;
