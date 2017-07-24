@@ -11,10 +11,72 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+<style>
+
+  #landing {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    text-align: center;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    font-family: 'Jaapokki', sans-serif;;
+    color: black;
+    position: relative;
+    font-size: 3.5rem;
+  }
+
+  h4 {
+    font-family: 'Jaapokki', sans-serif;
+    position: relative;
+    color: #424242;
+  }
+
+  p {
+    font-family: 'Jaapokki', sans-serif;
+    position: relative;
+    color: #424242;
+    width: 20vw;
+  }
+
+  a {
+    text-decoration: underline !important;
+    color: #424242;
+    font-family: 'Jaapokki', sans-serif;
+  }
+
+  a: hover {
+    color: black;
+  }
+</style>
 
 <body ng-app="mp3">
 
-    <div ng-view></div>
+    <div data-sticky-container>
+      <div class="title-bar noanim" data-sticky data-options="marginTop:0;" style="width:100%">
+        <div class="title-bar-left">
+          <a href="#/" class="homelink"><img src="./media/Logo.png">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="landing">
+      <div class="row content">
+        <div class="small-12 columns">
+          <div id="landing-content">
+            <h1 class="noanim">Hello there</h1>
+            <p>Thanks for stopping by. I'm currently working on renovating this site, so I got nothing for you right now.
+            In the meantime, catch me on
+            <a href="https://www.linkedin.com/in/cristobal-grana-samanez" target="_blank">Linkedin</a>&nbsp;
+            <a href="https://github.com/cristobalwee" target="_blank">Gitty hubs</a>&nbsp;
+            <a href="https://www.behance.net/cristobalw918d" target="_blank">Behance</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Angular Scripts -->
     <!-- NOTE: removing the ".min." can help debugging in the console-->
