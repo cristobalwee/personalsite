@@ -474,6 +474,31 @@ a {
     position: relative;
     color: #424242;
   }
+
+  #landing-content {
+    margin: 0 auto;
+    width: 50vw;
+    text-align: left;
+
+    h1 {
+      text-align: left;
+    }
+
+    p {
+      font-family: $font;
+      position: relative;
+      color: #424242;
+    }
+
+    a {
+      text-decoration: underline !important;
+      color: #424242;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
 }
 
 #about {
