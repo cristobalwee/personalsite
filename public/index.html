@@ -20,6 +20,7 @@
     text-align: center;
     top: 0;
     left: 0;
+    position: absolute;
   }
 
   h1 {
@@ -39,7 +40,8 @@
     font-family: 'Jaapokki', sans-serif;
     position: relative;
     color: #424242;
-    padding: 0 10rem;
+    padding: 0 1rem;
+    text-align: justify;
   }
 
   a {
@@ -54,6 +56,20 @@
 
   img {
     height: 2rem;
+    position: fixed;
+    bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 640px) {
+    p {
+      padding: 0;
+    }
+  }
+
+  @media only screen and (min-width: 641px) and (max-width: 760px) {
+    p {
+      padding: 0 6rem;
+    }
   }
 </style>
 
