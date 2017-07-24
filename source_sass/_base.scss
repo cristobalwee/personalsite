@@ -461,7 +461,6 @@ a {
     font-family: $font;
     color: black;
     @include transition(all 0.5s ease);
-    animation: fadein 0.5s both ease-in-out;
     position: relative;
     font-size: 3.5rem;
   }
@@ -475,28 +474,20 @@ a {
     color: #424242;
   }
 
-  #landing-content {
-    margin: 0 auto;
-    width: 50vw;
-    text-align: left;
+  p {
+    font-family: $font;
+    position: relative;
+    color: #424242;
+    width: 20vw;
+  }
 
-    h1 {
-      text-align: left;
-    }
+  a {
+    text-decoration: underline !important;
+    color: #424242;
+    font-family: $font;
 
-    p {
-      font-family: $font;
-      position: relative;
-      color: #424242;
-    }
-
-    a {
-      text-decoration: underline !important;
-      color: #424242;
-
-      &:hover {
-        color: black;
-      }
+    &:hover {
+      color: black;
     }
   }
 }
